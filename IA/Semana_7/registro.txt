@@ -1,0 +1,11 @@
+1: o papel do Gerador
+Minha estratégia como Gerador foi usar as dicas aos poucos para melhorar o desenho. No começo eu desenhei algo aleatório (por exemplo, o fantasma), mas depois fui ajustando conforme o Discriminador dava características como “tem rede”, “fica no chão com grama” ou “é usado na cabeça”. A cada rodada eu tentava incluir mais detalhes, então sim, parecia que eu estava “aprendendo” com os erros.
+
+2: o papel do Discriminador
+Minha estratégia como Discriminador foi comparar os desenhos com os objetos que eu tinha escolhido (como o gol e o boné). No início eu aceitava coisas mais simples, mas depois comecei a exigir mais detalhes, como a rede do gol ou o formato correto do boné. Meu critério mudou sim, porque fui ficando mais exigente conforme o Gerador melhorava.
+
+3: aprendizado por tentativa e erro
+O processo ajudou porque o Gerador errava no começo, mas recebia dicas e ia corrigindo. Por exemplo, um desenho que não parecia um gol foi melhorando quando adicionou a rede e o chão com grama. Essa “competição” fez com que os desenhos ficassem cada vez mais parecidos com os reais.
+
+4: aplicação em outros contextos
+Essa dinâmica pode ser usada, por exemplo, para ensinar uma IA a escrever textos. Um “criador” escreve frases e um “juiz” avalia se parecem naturais ou não. Com o tempo, o criador melhora até conseguir escrever textos que parecem feitos por humanos.
