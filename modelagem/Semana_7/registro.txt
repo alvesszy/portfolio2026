@@ -1,0 +1,57 @@
+CREATE TABLE Clientes (
+    ClienteID INT PRIMARY KEY AUTO_INCREMENT,
+    Nome VARCHAR(100),
+    Email VARCHAR(100),
+    Cidade VARCHAR(50),
+    Idade INT
+);
+
+INSERT INTO Clientes (Nome, Email, Cidade, Idade)
+VALUES
+('Ana Silva', 'ana@email.com', 'São Paulo', 30);
+
+select * from Clientes;
+
+CREATE TABLE Produto (
+    ProdutoID INT PRIMARY KEY AUTO_INCREMENT,
+    Nome VARCHAR(100),
+    Descricao VARCHAR(100),
+    Preco DECIMAL (10,2),
+    Estoque INT,
+    Categoria VARCHAR(100)
+);
+    
+INSERT INTO Produto (Nome, Descricao, Preco, Estoque, Categoria)
+VALUES
+('Bola', 'Bola de futebol society', '65.99', '12', 'Futebol'),
+('Bola', 'Bola de futebol society', '65.99', '12', 'Futebol');
+
+select * from Produto;
+
+CREATE TABLE Pedido (
+    PedidoID INT PRIMARY KEY AUTO_INCREMENT,
+    DATA_PEDIDO DATE,
+    ClienteID int  NOT NULL,
+    ProdutoID INT  NOT NULL,
+    foreign key (ClienteID) references clientes(ClienteID),
+    foreign key (ProdutoID) references Produto(ProdutoID)
+  );
+  
+INSERT INTO Pedido (DATA_PEDIDO, ClienteID, ProdutoID)
+VALUES ('1998-08-09', 1, 1),
+       ('1998-08-09', 1, 1);
+
+select * from Pedido;
+
+DELETE FROM Pedido 
+WHERE PedidoID  = '1';
+
+select * from Pedido;
+
+UPDATE Produto
+SET Nome = 'Chuteira',
+    Descricao = 'Chuteira de campo',
+    Preco = '333.99'
+WHERE ProdutoID = 2;
+
+select * from Produto;

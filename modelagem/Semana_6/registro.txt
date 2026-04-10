@@ -1,0 +1,21 @@
+1 - UPDATE Salas SET NomeSala = 'Sala 2' WHERE SalaID = 1;
+UPDATE Salas SET NomeSala = 'Sala 1' WHERE SalaID = 2;
+
+2- BEGIN TRY
+BEGIN TRANSACTION;
+
+UPDATE Salas SET NomeSala = 'Sala 1' WHERE SalaID = 1;
+UPDATE Salas SET NomeSala = 'Sala 2' WHERE SalaID = 2;
+
+COMMIT;
+END TRY
+BEGIN CATCH
+ROLLBACK;
+
+PRINT 'Deadlock detectado. Tente novamente.';
+END CATCH;
+
+3- Evitar pausas e fazer transações rápidas.
+
+4- CREATE INDEX idx_reserva_sala_data
+ON Reservas (SalaID, DataReserva);
